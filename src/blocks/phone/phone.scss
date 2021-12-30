@@ -1,0 +1,7 @@
+.phone {
+	$self: &;
+	margin: 11px 43px 0 0;
+	@include media ('<=xxxs') {
+		margin-right: 0;
+	}
+}

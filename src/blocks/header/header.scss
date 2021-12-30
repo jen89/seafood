@@ -1,0 +1,147 @@
+$ColorText: #fff;
+$BtnColor: rgba(255, 255, 255, .5);
+
+.header {
+	$self: &;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+	}
+
+	&__content {
+		background: url($images-path) top / cover no-repeat;
+        padding-bottom: 20px;
+        margin-top: -110px;
+        min-height: calc(100vh - 60px);
+        @include media ('<=xxs') {
+            min-height: calc(100vh - 200px);
+        }
+
+	}
+
+	&__slider {
+        max-width: 522px;
+        padding: 55px 0 120px 112px;
+        @include media ('<=sm') {
+            padding-left: 50px;
+        }
+        @include media ('<=xxs') {
+            padding-left: 0;
+            padding-top: 0;
+        }
+        
+        
+	}
+
+	&__slider-item {
+        overflow: hidden;
+	}
+
+	&__slider-text {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 21.6px;
+        color: $ColorText;
+	}
+
+    .slick-next, 
+    .slick-prev {
+        width: 18px;
+        height: 11px;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        left: 40px;
+        @include media ('<=sm') {
+            left: 9px;
+        }
+    }
+    
+    .slick-next {
+       background: url(images/icons-sprite.svg#icon-arrow_next-view-white) center / 18px 11px no-repeat transparent;
+       bottom: 0;
+    }
+
+    .slick-prev {
+        background: url(images/icons-sprite.svg#icon-arrow_prev-view-white) center / 18px 11px no-repeat transparent;
+        top: 0;
+    }
+
+    .slick-dots {
+        list-style: none;
+        position: absolute;
+        left: 35px;
+        top: 53px;
+        bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media ('<=sm') {
+            left: 5px;
+        }
+    }
+
+    .slick-dots button {
+        border:none;
+        background-color: transparent;
+        padding: 0;
+        color: $ColorText;
+        opacity: .5;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .slick-active button {
+        opacity: 1;
+    }
+
+    .slick-dots button::before {
+        content: "0";
+    }
+
+    .slick-dots li:nth-child(n + 10):before {
+        content: "";
+    }
+
+	&__content-btn {
+        display: inline-block;
+        margin-left: 112px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+        line-height: 31.65px;
+        font-weight: 700;
+        color: $ColorText;
+        padding: 12px 88px;
+        border-radius: 20px;
+        background-color: $BtnColor;
+        transform: translateY(-100px);
+        text-transform: uppercase;
+        position: absolute;
+        @include media ('<=sm') {
+           margin-left: 50px;
+        }
+        @include media ('<=xxs') {
+            margin-left: 0;
+        }
+        
+	}
+
+	&__content-box {
+        display: flex;
+        justify-content: flex-end;
+        // margin-left: 100%;
+        margin-right: 30px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $ColorText;
+        text-transform: uppercase;
+	}
+
+	&__content-link_active {
+        font-weight: 700;
+	}
+
+}

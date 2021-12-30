@@ -1,0 +1,26 @@
+.title {
+	$self: &;
+	max-width: 590px;
+	padding: 165px 0 0 112px;
+	margin-bottom: 130px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 95px;
+	color: $colorTitle;
+	@include media ('<=sm') {
+		max-width: 100%;
+		padding-left: 0;
+		text-align: center;
+		font-size: 60px;
+		line-height: 66px;
+	}
+	@include media ('<=xxs') {
+		font-size: 34px;
+		line-height: 44px;
+	}
+	@include media ('<=xxxs') {
+		padding-top: 125px;
+		margin-bottom: 60px;
+	}
+}

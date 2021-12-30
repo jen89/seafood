@@ -1,0 +1,40 @@
+$bgColor: #fff;
+.contacts {
+	$self: &;
+	background: url(images/bg-contacts.jpg) bottom left no-repeat;
+	@include media ('<=xxs') {
+		background-image: none;
+	}
+	&__box {
+		width: 390px;
+		margin-left: auto;
+		padding: 33px 0 33px 20px;
+		background-color: $bgColor;
+		@include media ('<=xxs') {
+			padding: 33px 0;
+			width: 100%;
+		}
+
+	}
+
+	&__box-text {
+		width: 195px;
+		margin-bottom: 30px;
+		font-family: 'Roboto Slab', serif;
+		font-size: 18px;
+		line-height: 24px;
+		color: $colorTitle;
+	}
+
+	&__box-list {
+
+	}
+
+	&__box-item {
+		margin-top: 30px;
+	}
+	&__box-item  {
+		display: block;
+	}
+
+}

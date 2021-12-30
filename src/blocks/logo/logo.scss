@@ -1,0 +1,14 @@
+.logo {
+	$self: &;
+	margin-left: 16px;
+	@include media ('<=xxxs') {
+		margin-left: 0;
+	}
+
+	img {
+		@include media ('<=xxs') {
+			width: 65%;
+		}
+		
+	}
+}

@@ -1,0 +1,32 @@
+$textColor: #fff;
+.seafood-box {
+	@include media ('<=xs') {
+		display: none;
+	}
+	$self: &;	
+	background: url(images/bg-seafood.jpg) top center / cover no-repeat;
+	padding: 290px 0 100px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: $textColor;
+
+	&__items {
+	display: flex;
+	justify-content: space-around;
+}
+
+&__item {
+	background: url(images/icons-sprite.svg#icon-seafood_decor-view-white) center / cover no-repeat transparent;
+	width: 180px;
+	min-height: 165px;
+	fill: 0.15;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+
+}

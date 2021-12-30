@@ -1,0 +1,25 @@
+.footer {
+	$self: &;
+	padding: 25px 0 110px;
+	@include media ('<=lg') {
+		display: flex;
+		padding: 40px 0;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		@include media ('<=lg') {
+			justify-content: center;
+		}
+		.menu {
+			padding-bottom: 30px;
+		}
+	}
+	.logo {
+		@include media ('<=lg') {
+			display: none;
+		}
+	}
+
+}

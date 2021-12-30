@@ -1,0 +1,96 @@
+$ColorLink: #001E64;
+$colorBtn: #001E64;
+
+.menu {
+	$self: &;
+	margin-top: 16px;
+	@include media ('<=lg') {
+		margin: 12px 20px 0 auto;
+	}
+
+	&__list {
+		display: flex;
+		@include media ('<=lg') {
+			display: block;
+			position: absolute;
+			left: 20%;
+			right: 20%;
+			background-color: #fff;
+			top: -350px;
+			transition: all .5s;
+			z-index: 5;
+			&_active {
+				top: 73px;
+			}
+		}
+		@include media ('<=xxxs') {
+			left: 10%;
+			right: 10%;
+		}
+	}
+	&__btn {
+		width: 40px;
+		border: none;
+		background-color: transparent;
+		padding: 13px 0;
+		position: relative;
+		display: none;
+		z-index: 10;
+		@include media ('<=lg') {
+			display: inline-block;
+		}
+		
+		span {
+			display: block;
+			height: 4px;
+			background-color: $colorBtn;
+		}
+		&::after, &::before{
+			content: '';
+			left: 0;
+			right: 0;
+			height: 4px;
+			background-color: $colorBtn;
+			position: absolute;
+		}
+		&::after {
+			bottom: 0;
+		}
+		&::before {
+			top: 0;
+		}
+	}
+	
+
+	&__item + &__item {
+		margin-left: 30px;
+		@include media ('<=lg') {
+			margin-left: 0;
+		}
+	}
+	
+	&__link {
+		font-size: 18px;
+		line-height: 21px;
+		font-weight: 500;
+		color: $ColorLink;
+		text-transform: uppercase;
+		transition-property: color;
+		transition-duration: 500ms;
+		@include media ('<=lg') {
+			display: block;
+			padding: 20px 0;
+			text-align: center;
+			// pointer-events: none;
+		}
+		&:hover {
+			border-bottom: 1px solid $ColorLink;
+			@include media ('<=lg') {
+				border-bottom: none;
+			}
+		}
+	}
+	
+
+
+}

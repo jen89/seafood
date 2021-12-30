@@ -1,0 +1,36 @@
+.footer-social {
+	$self: &;
+	display: flex;
+	align-items: center;
+	padding-bottom: 19px;
+	@include media ('<=lg') {
+		padding-bottom: 0;
+	}
+	&__link {
+		fill: #C4C4C4;
+		transition: all .3s;
+	}
+
+	&__link:hover {
+		fill: $colorTitle;
+	}
+
+	&__item +.footer-social__item {
+		margin-left: 10px;
+	}
+
+	&__instagram, &__whatsapp {
+		width: 40px;
+		height: 40px;
+	}
+	&__telegram {
+		width: 40px;
+		height: 31px;
+	}
+
+	&__facebook {
+		width: 23px;
+		height: 40px;
+	}
+
+}
